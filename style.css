@@ -1,0 +1,577 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cream: #DDD8C4;
+    --lightgreen: rgb(105, 159, 143);
+    --green: #84B59F;
+    --darkgreen: darkslategrey;
+    --blue: #50808E;
+}
+
+body {
+    background: var(--green);
+    height: 100%;
+    width: 100%;
+}
+
+.navbar {
+    height: 11vh;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--green);
+    opacity: 0.9;
+}
+
+.navbar .logo img{
+    margin-top: 30px;
+    margin-left: 50px;
+    height: 12vh;
+}
+
+.navbar .list {
+    display: flex;
+    margin: 25px;
+    gap: 50px;
+    align-items: center;
+}
+
+.navbar .list a{
+    color: var(--darkgreen);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.navbar .list a:hover{
+    text-decoration: underline;
+
+}
+
+.navbar .list button {
+    color: var(--darkgreen);
+    font-size: 14px;
+    font-weight: 600;
+    font-family:'Times New Roman', Times, serif;
+    border: transparent;
+    background: transparent;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.navbar .list button:hover {
+    background-color: var(--darkgreen);
+    color: var(--cream);
+    font-weight: 600;
+}
+
+.navbar .hamburger {
+    opacity: 0;
+    z-index: 10000;
+}
+
+.hamburger i {
+    font-size: 35px;
+    color: var(--darkgreen);
+}
+
+/* MAIN SECTION */
+
+.main {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 6vw;
+    /* margin-top:70px; */
+}
+
+.main .svgimg svg{
+    margin-top: 30px;
+    height: 570px;
+    width:650px;
+    background-color: var(--darkgreen);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 20px 0;
+}
+
+.main .title {
+    font-size: 50px;
+    text-align: center;
+    color: var(--darkgreen);
+}
+
+.main .title .text {
+    font-size: 30px;
+}
+
+.main .title p {
+    margin: 10px 0;
+}
+
+.main .title button {
+    padding: 20px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    color: var(--cream);
+    background: var(--darkgreen);
+    border-color: var(--darkgreen);
+    scale: 1;
+}
+
+.main .title button:hover {
+    scale: 1.1;
+    /* padding: 22px 32px; */
+    text-decoration: underline;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 3px 7px 10px black;
+    transition: scale 0.3s ease-in-out;
+}
+
+.playlist .section {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 50px 50px;
+    margin-bottom: 10px;
+    padding-top: 13vh;
+    color: var(--cream);
+    text-shadow: 5px 3px 3px black;
+}
+
+.playlist .sub {
+    font-size: 18px;
+    font-style: italic;
+    margin-left:60px;
+    margin-bottom: 20px;
+    color: var(--darkgreen);
+}
+
+#searchInput {
+    font-size: 18px;
+    font-style: italic;
+    margin-left:60px;
+    margin-bottom: 20px;
+    color: var(--darkgreen);
+    height: 29px;
+    background-color: var(--darkgreen);
+    opacity: 0.7;
+    border: transparent;
+    color: var(--cream);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.sub button {
+    padding: 7.5px 5px 5px 5px;
+    background-color: var(--darkgreen);
+    color: black;
+    opacity: 0.7;
+    border: transparent;
+    outline: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.playlist .cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.playlist .cards .card1 {
+    background-color: var(--lightgreen);
+    height: 300px;
+    width: 200px;
+    border-radius: 15px;
+    padding: 10px;
+    scale: 1;
+}
+
+.playlist .cards .card1 img{
+    height: 170px;
+    width: 180px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.playlist .cards .card1 .title {
+    padding: 10px 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.playlist .cards .card1 .text{
+    padding: 0 5px;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.playlist .cards .card1 .songs {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px;
+    border-radius: 5px;
+    width: 24px;
+    position: relative;
+    bottom: 220px;
+    left: 150px;
+    color: black;
+    background-color: silver;
+    opacity: 0.6;
+    text-align: center;
+}
+
+.playlist .cards .card1:hover {
+    scale: 1.2;
+    box-shadow: 8px 10px 10px var(--darkgreen);
+    cursor: pointer;
+    transition: scale 0.3s ease-in-out;
+}
+
+.playlist .cards .card2 {
+    background-color: darkslategray;
+    height: 300px;
+    width: 200px;
+    border-radius: 15px;
+    padding: 10px;
+    color: var(--cream);
+    scale: 1;
+}
+
+.playlist .cards .card2 img{
+    height: 170px;
+    width: 180px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.playlist .cards .card2 .title {
+    padding: 10px 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.playlist .cards .card2 .text{
+    padding: 0 5px;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.playlist .cards .card2 .songs {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px;
+    border-radius: 5px;
+    width: 24px;
+    position: relative;
+    bottom: 220px;
+    left: 150px;
+    color: black;
+    background-color: silver;
+    opacity: 0.6;
+    text-align: center;
+}
+
+.playlist .cards .card2:hover {
+    scale: 1.2;
+    box-shadow: 8px 10px 10px rgb(9, 28, 24);
+    cursor: pointer;
+    transition: scale 0.3s ease-in-out;
+}
+
+.playlist .card2 button {
+    background-color: transparent;
+    border: none;
+    color: var(--cream);
+    font-style: oblique;
+    margin-left: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.playlist .card2:hover button {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.playlist .review {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.playlist .review .review-cards{
+    display: flex;
+    gap: 20px;
+    margin-right: 10px;
+}
+
+.playlist .review-card {
+    background: var(--lightgreen);
+    height: 300px;
+    width: 200px;
+    border-radius: 15px;
+    padding: 10px;
+    scale: 1;
+}
+
+.playlist .review-card img{
+    height: 170px;
+    width: 180px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    opacity: 0.5;
+}
+
+.playlist .review-card .title {
+    padding: 10px 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.playlist .review-card .text{
+    padding: 0 5px;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.playlist .review-card:hover {
+    scale: 1.1;
+    box-shadow: 8px 10px 10px var(--darkgreen);
+    cursor: pointer;
+    transition: scale 0.3s ease-in-out;
+}
+
+.playlist .review .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--darkgreen);
+    width: 500px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: var(--cream)
+}
+
+.playlist .review .form p{
+    font-size: 18px;
+}
+
+.playlist .review .form input {
+    background-color: transparent;
+    border: transparent;
+    color: var(--cream);
+    outline: 0;
+}
+
+.playlist .review .form button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: var(--darkgreen);
+    color: var(--lightgreen);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.playlist .review .form button:hover {
+    color: var(--darkgreen);
+    background-color: var(--lightgreen);
+}
+
+/* FOOTER SECTION */
+
+.footer {
+    margin-top: 50px;
+    padding: 10px;
+    background-color: var(--darkgreen);
+    opacity: 0.6;
+}
+
+.tnc {
+    display: flex;
+}
+
+.cols {
+    display: flex;
+    justify-content: center;
+    flex: 2
+}
+
+.cols .col{
+    font-size: 12px;
+    margin: 10px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cols a{
+    text-decoration: none;
+    color: black;
+}
+
+.cols a:hover{
+    text-decoration: underline;
+}
+
+.links {
+    margin-top: 10px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.links p {
+    margin: 0 10px;
+}
+
+.links i {
+    margin: 0 5px;
+    color: black;
+}
+
+.links i:hover {
+    scale: 1.4;
+}
+
+.links a {
+    text-decoration: none;
+}
+
+.home {
+    border: 1px solid black;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 50px;
+    margin-right: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.home a {
+    color: black
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1000px) {
+    .main {
+        display:flex;
+        flex-direction: column;
+    }
+    .svgimg {
+        margin-top: 8vh;
+        justify-content: center;
+    }
+    svg {
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    .playlist .section {
+        font-size: 30px;
+        text-align: center;
+    }
+    .playlist .sub {
+        font-size: 20px;
+        text-align: center;
+        margin-right: 40px;
+        padding-bottom: 20px;
+    }
+    .playlist .cards {
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .playlist .cards .card1 {
+        scale: 1.3;
+        margin: 60px 50px;
+    }
+    .playlist .cards .card2 {
+        scale: 1.3;
+        margin: 60px 50px;
+    }
+    .playlist .review-cards {
+        height: auto;
+        width: auto;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .playlist .review-cards .review-card {
+        scale: 1.2;
+        margin: 40px 20px;
+    }
+    .navbar .hamburger {
+        background: transparent;
+        border: transparent;
+        padding-right: 30px;
+        opacity: 1;
+    }
+    .navbar .list {
+        flex-direction: column;
+        background-color: black;
+        height: 101%;
+        width: 300px;
+        position: fixed;
+        top: -30px;
+        right: -330px;
+        align-items: end;
+        opacity: 1;
+    }
+    .navbar .list .first {
+        padding-top: 120px;
+    }
+    .navbar .list div {
+        padding: 30px;
+    }
+    .navbar .list div a {
+        font-size: 20px;
+        color: var(--cream);
+    }
+    .navbar .list button {
+        padding: 30px;
+        font-size: 20px;
+        color: var(--cream);
+    }
+}
+
+.navbar button:hover + .list {
+    right: -30px;
+}
+
+@media screen and (max-width: 850px) {
+    .playlist .review {
+        flex-direction: column-reverse;
+    }
+    .playlist .review .form {
+        height: 30vh;
+        align-self: center;
+        margin-top: 10px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    svg {
+        scale:0.7;
+    }
+}
